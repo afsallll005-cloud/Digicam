@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+Frontend/node_modules/
+Backend/node_modules/
+
+# Production Build Output
+dist/
+Frontend/dist/
+dist-ssr/
+build/
+
+# Environment Variables & Secrets (CRITICAL: Do NOT commit to GitHub)
+.env
+.env.local
+.env.*.local
+Backend/.env
+Frontend/.env.local
+
+# Vercel Cache & Configuration
+.vercel/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor & OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

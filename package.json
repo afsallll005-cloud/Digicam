@@ -1,0 +1,24 @@
+{
+  "name": "digitalcam-store-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DIGICAM — Pro Cameras, Cinema Rigs & Studio Accessories E-Commerce Store",
+  "scripts": {
+    "dev": "npm run dev --prefix Frontend",
+    "build": "npm run build --prefix Frontend",
+    "preview": "npm run preview --prefix Frontend",
+    "server": "npm run dev --prefix Backend",
+    "start": "npm run start --prefix Backend",
+    "install:all": "npm install --prefix Frontend && npm install --prefix Backend"
+  },
+  "keywords": [
+    "camera-store",
+    "react",
+    "vite",
+    "fullstack",
+    "e-commerce",
+    "cinema-gear"
+  ],
+  "author": "",
+  "license": "ISC"
+}

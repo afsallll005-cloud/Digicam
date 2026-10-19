@@ -1,0 +1,17 @@
+.deletePermanent-btn {
+    background-color: rgb(227, 72, 72);
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    color: aliceblue;
+}
+
+.restoreProduct-btn {
+    background-color: green;
+      padding: 10px;
+    border: none;
+    border-radius: 8px;
+    color: aliceblue;
+}
+
+

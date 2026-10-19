@@ -1,0 +1,193 @@
+/* Contact Modal Styles */
+.vl-contact-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+  animation: modal-pop-up 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vl-contact-inner {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.vl-contact-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vl-contact-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-lime);
+  text-transform: uppercase;
+}
+
+.vl-contact-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+.vl-contact-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.contact-link {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  color: var(--accent-lime);
+}
+
+/* Form */
+.vl-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-subtle);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  background-color: #121212;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 12px 14px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--accent-lime);
+  background-color: #161616;
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field select option {
+  background-color: #181818;
+  color: #fff;
+}
+
+.vl-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--text-primary);
+  color: #000;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 6px;
+}
+
+.vl-submit-btn:hover {
+  background-color: var(--accent-lime);
+  transform: translateY(-2px);
+}
+
+.btn-arrow {
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+
+.vl-submit-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Success state */
+.vl-contact-success {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.success-icon {
+  font-size: 32px;
+  color: var(--accent-lime);
+  animation: pulse-rec 1.2s infinite;
+}
+
+.success-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.success-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 420px;
+}
+
+@media (max-width: 600px) {
+  .vl-contact-inner {
+    padding: 30px 20px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

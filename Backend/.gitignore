@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment Variables & Sensitive DB credentials
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+*.log
+
+# Uploaded user temporary files
+# Keep directory structure but ignore massive uploaded dumps if needed
+public/images/*
+!public/images/.gitkeep

@@ -1,0 +1,530 @@
+/* DIGICAM Store Navbar Styling */
+.vl-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(15, 15, 15, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+  height: 76px;
+  display: flex;
+  align-items: center;
+}
+
+.vl-navbar.scrolled {
+  background-color: rgba(15, 15, 15, 0.96);
+  border-bottom-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+}
+
+.vl-nav-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Brand Logo */
+.vl-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.vl-logo:hover {
+  transform: translateY(-1px);
+}
+
+.vl-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.vl-brand-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.vl-logo-text {
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.vl-logo-sub {
+  font-family: var(--font-mono, monospace);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent-lime, #d8f709);
+  text-transform: uppercase;
+}
+
+/* Desktop Links */
+.vl-desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.vl-nav-link {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: color 0.25s ease;
+  position: relative;
+  padding: 6px 0;
+}
+
+.vl-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-lime);
+  transition: width 0.25s ease;
+}
+
+.vl-nav-link:hover {
+  color: var(--text-primary);
+}
+
+.vl-nav-link:hover::after {
+  width: 100%;
+}
+
+.vl-nav-link.deal-link {
+  color: var(--accent-lime);
+  border: 1px solid rgba(216, 247, 9, 0.35);
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(216, 247, 9, 0.08);
+}
+
+.vl-nav-link.deal-link:hover {
+  background: var(--accent-lime);
+  color: #000;
+  border-color: var(--accent-lime);
+}
+
+.vl-nav-link.deal-link::after {
+  display: none;
+}
+
+/* Search Bar */
+.vl-nav-search {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 6px 14px;
+  gap: 8px;
+  transition: all 0.25s ease;
+  width: 220px;
+}
+
+.vl-nav-search:focus-within {
+  background: rgba(0, 0, 0, 0.85);
+  border-color: var(--accent-lime);
+  width: 260px;
+  box-shadow: 0 0 14px rgba(216, 247, 9, 0.18);
+}
+
+.vl-nav-search .search-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.vl-nav-search .search-input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 12px;
+  width: 100%;
+  font-family: inherit;
+}
+
+.vl-nav-search .search-input::placeholder {
+  color: #777;
+}
+
+.vl-nav-search .clear-search {
+  color: #888;
+  font-size: 11px;
+  transition: color 0.2s ease;
+}
+
+.vl-nav-search .clear-search:hover {
+  color: #fff;
+}
+
+/* Right Actions */
+.vl-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.vl-icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.vl-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+}
+
+.action-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--accent-lime);
+  color: #000;
+  font-size: 10px;
+  font-weight: 800;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cart Button */
+.vl-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(216, 247, 9, 0.1);
+  border: 1px solid rgba(216, 247, 9, 0.35);
+  color: #ffffff;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.vl-cart-btn:hover {
+  background: var(--accent-lime);
+  color: #000;
+  border-color: var(--accent-lime);
+  transform: translateY(-1px);
+}
+
+.cart-label {
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.cart-count-badge {
+  background: var(--accent-lime);
+  color: #000000;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 10px;
+  padding: 1px 7px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.vl-cart-btn:hover .cart-count-badge {
+  background: #000000;
+  color: var(--accent-lime);
+}
+
+.vl-login-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.25s ease;
+}
+
+.vl-login-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.vl-menu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.vl-menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.vl-menu-text {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.vl-menu-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 18px;
+}
+
+.vl-menu-bars .bar {
+  height: 1.5px;
+  background-color: var(--text-primary);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vl-menu-bars .bar-1 {
+  width: 18px;
+}
+
+.vl-menu-bars .bar-2 {
+  width: 12px;
+  align-self: flex-end;
+}
+
+.vl-menu-toggle.active .bar-1 {
+  transform: translateY(3px) rotate(45deg);
+}
+
+.vl-menu-toggle.active .bar-2 {
+  width: 18px;
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* Fullscreen Slideout Menu */
+.vl-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0.4s ease;
+}
+
+.vl-menu-overlay.open {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.vl-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.vl-menu-overlay.open .vl-menu-backdrop {
+  opacity: 1;
+}
+
+.vl-menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 480px;
+  background-color: #141414;
+  border-left: 1px solid var(--border-subtle);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.vl-menu-overlay.open .vl-menu-panel {
+  transform: translateX(0);
+}
+
+.vl-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.vl-menu-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+}
+
+.vl-menu-close {
+  color: var(--text-muted);
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.vl-menu-close:hover {
+  color: var(--text-primary);
+}
+
+.vl-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.vl-menu-link {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.vl-menu-link .num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-lime);
+  letter-spacing: 0.05em;
+}
+
+.vl-menu-link .txt {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3.5vw, 26px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.vl-menu-link:hover {
+  color: var(--accent-lime);
+  transform: translateX(8px);
+}
+
+.vl-menu-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vl-menu-label {
+  font-size: 11px;
+  color: var(--text-subtle);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.vl-menu-phone, .vl-menu-email {
+  font-size: 14px;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: block;
+}
+
+.vl-menu-phone:hover, .vl-menu-email:hover {
+  color: var(--accent-lime);
+}
+
+.vl-menu-note {
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.vl-btn-primary {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--text-primary);
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.vl-btn-primary:hover {
+  background-color: var(--accent-lime);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1080px) {
+  .vl-desktop-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .vl-nav-search {
+    display: none;
+  }
+  .vl-nav-container {
+    padding: 0 18px;
+  }
+  .vl-login-btn {
+    display: none;
+  }
+  .vl-menu-panel {
+    padding: 30px 20px;
+  }
+}

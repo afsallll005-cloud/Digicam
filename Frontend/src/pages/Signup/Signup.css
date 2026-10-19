@@ -1,0 +1,99 @@
+/* DIGICAM Signup Page Styling */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary, #0f0f0f);
+  padding: 30px 20px;
+  position: relative;
+}
+
+/* Card */
+.login-card {
+  position: relative;
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 48px 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+}
+
+/* Heading */
+.login-card h2 {
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+/* Input fields */
+.login-card input {
+  width: 100%;
+  padding: 13px 16px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  outline: none;
+  background: #0d0d0d;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.login-card input:focus {
+  border-color: var(--accent-lime, #d8f709);
+  box-shadow: 0 0 10px rgba(216, 247, 9, 0.15);
+}
+
+.login-card input::placeholder {
+  color: #666;
+}
+
+/* Button */
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent-lime, #d8f709);
+  color: #000000;
+  font-family: var(--font-display, "Syne", sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-card button:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(216, 247, 9, 0.3);
+}
+
+/* Login link */
+.login-card a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #a3a3a3;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-card a:hover {
+  color: var(--accent-lime, #d8f709);
+  text-decoration: underline;
+}
