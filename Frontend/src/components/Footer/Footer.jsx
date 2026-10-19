@@ -41,7 +41,7 @@ const Footer = () => {
                 gear@digicam.store
               </a>
               <a href="tel:+18004453564" className="vl-footer-link">
-                +1
+                +1 (800) 445-3564
               </a>
               <p className="vl-col-note">
                 Studio Experience Center & Lab, <br />
